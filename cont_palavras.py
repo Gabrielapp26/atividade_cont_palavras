@@ -40,7 +40,7 @@ while True:
     print('2 - Contar as palavras e exibir em um ranking')
     print('3 - Procurar por palavras específicas')
     print('4 - Exibir palavra com mais e menos frequente')
-    print('5 - Encerrar')
+    print('0 - Encerrar')
     opcao = input('\nEscolha uma opção: ')
     
     if opcao == '1':
@@ -57,8 +57,8 @@ while True:
     elif opcao == '4':
             exibir_frequencia(texto)
             
-    elif opcao == '5':
-        print('Encerrando. Obrigada, até breve')
+    elif opcao == '0':
+        print('Encerrando a aplicação. Obrigada, até breve!')
         break
     else:
         print('Opção inválida')

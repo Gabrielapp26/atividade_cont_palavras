@@ -1,1 +1,14 @@
-oi este é um teste á é í
+Crie um programa em Python que receba um texto (proveniente de um arquivo TXT) e realize as seguintes atividades:
+
+1 - Carregue o arquivo
+2 - Retire os acentos e exiba o texto reescrito.
+3 - Realize a contagem das palavras (que deverão ser ranqueadas em forma decrescente).
+4 - Permita ao usuário saber qual(is) palavra(s) que ele deseja e quantas aparições de cada uma.
+5 - Exibir a com mais aparição e a com menos aparição.
+6 - Mostre um menu para as escolhas acima e use o 0 para encerrar a aplicação.
+
+Feito isso, utilize o README.md, do Github explicando como executou seu processo de contagem das palavras, exemplificando através de pedaços de código.
+
+Entregue seu trabalho, postando o no seu Github e envie-me o link.
+
+Bom trabalho.
