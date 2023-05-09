@@ -1,14 +1,17 @@
+# Importação das coleções
 from collections import Counter
 from unidecode import unidecode
 
 with open('arquivo.txt', 'r') as arquivo_txt:
     texto = arquivo_txt.read()
 
+# Função para carregar o arquivo e remover acentos das palavras
 def carregar_arquivo(arquivo):
     with open(arquivo, 'r') as arquivo_txt:
         texto = arquivo_txt.read()
     return unidecode(texto)
 
+# Função para realizar a contagem das palavras e exibir em forma de ranking
 def contar_palavras(texto):
     palavras = texto.lower().split()
     contador_palavras = Counter(palavras)
@@ -16,6 +19,7 @@ def contar_palavras(texto):
     for palavra, frequencia in ranking:
         print(f'{palavra}: {frequencia}')
         
+# Função para permitir que o usuário procure por palavras específicas da sua escolha e mostre a frequência que a palavra aparece
 def procurar_palavras(texto):
     palavras = texto.lower().split()
     contador_palavras = Counter(palavras)
@@ -23,7 +27,8 @@ def procurar_palavras(texto):
     for palavra in palavras_procuradas:
         frequencia = contador_palavras.get(palavra.strip(), 0)
         print(f'A palavra: "{palavra.strip()}", aparece: {frequencia} vezes no arquivo.')
-        
+
+# Função para exibir a palavra mais e menos frequente
 def exibir_frequencia(texto):
     palavras = texto.lower().split()
     contador_palavras = Counter(palavras)
@@ -33,7 +38,8 @@ def exibir_frequencia(texto):
     frequencia_menor = contador_palavras.most_common()[-1][1]
     print(f'A palavra com mais aparições é "{palavra_mais_frequente}" com o total de {frequencia_maior} aparições.')
     print(f'A palavra com menos aparições é "{palavra_menos_frequente}" com o total de {frequencia_menor} aparições.')
-    
+
+# Loop com o menu principal
 while True:
     print('\nMenu de opções:')
     print('1 - Carregar arquivo de texto e retirar acentos')
